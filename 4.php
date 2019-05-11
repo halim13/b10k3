@@ -9,10 +9,11 @@
 <body>
 	<?php  
 	echo "<br>";
+	
+	// buat fungsi cetak
+	function cetak(){
 	// inisialisasi array
 	$string = ['P','R','O','G','R','A','M','M','E','R'];
-	// buat fungsi cetak
-	function cetak($string){
 		// hitung panjang string
 		$jumlah=count($string);
 		// hitung panjang string untuk perulangan terbalik
@@ -37,7 +38,7 @@
 		}
 	}
 	// panggil fungsi cetak
-	cetak($string);
+	cetak();
 	?>
 </body>
 </html>

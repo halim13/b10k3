@@ -27,7 +27,7 @@
 	// buat fungsi cek email
 	function cekEmail($email){
 		// pregmatch email
-		$pregEmail=preg_match("/^[a-zA-Z0-9@{1}.]*$/",$email);
+		$pregEmail=preg_match("/^[a-zA-Z0-9@.]*$/",$email);
 		// pecah sebelum dan setelah @
 		$pecah = explode("@", $email);
 		// pecah sebelum dan setelah .
