@@ -1,22 +1,19 @@
 <?php 
 include 'config.php';
-
+// inisialisasi variabel aksi
 $aksi=$_GET['aksi'];
+// jika aksi=tambahProgrammer
 if ($aksi=="tambahProgrammer") {
-	$id=$_GET['id'];
-	$vote=$_GET['vote'];
-	$vote+=1;
-	$q="UPDATE candidates set earned_vote='$vote' where id='$id'";
-	mysqli_query($mysqli,$q);
-}else if ($aksi=="tambahProgrammer") {
 	$nama=$_POST['nama'];
 	$q="INSERT into users values('','$nama')";
 	mysqli_query($mysqli,$q);
-}else if ($aksi=="tambahSkills") {
+// jika aksi=tambahSkill
+}else if ($aksi=="tambahSkill") {
 	$skill=$_POST['skill'];
-	$user=$_POST['id'];
+	$user=$_GET['id'];
 	$q="INSERT into skills values('','$skill','$user')";
 	mysqli_query($mysqli,$q);
 }
+// arahkan ke index.php
 header("Location:index.php");
 ?>
