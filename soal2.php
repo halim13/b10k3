@@ -42,7 +42,8 @@
 		}
 	}
 	// panggil fungsi cekUsername
-	cekUsername("........");
+	cekUsername("jonhalim");
+	echo "<br>";
 	echo "<br>";
 	// panggil fungsi cekEmail
 	cekEmail("halim@hasan.udin");
