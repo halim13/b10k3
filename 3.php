@@ -42,6 +42,14 @@
 					if ($arr[$j]==$string) {
 						$no=0;
 						// echo "true ";
+						for ($j=0; $j < $jumlahna; $j++) { 
+							// acak karakter
+							$acak=rand(0,$panjangKarakter-1);
+							// masukkan karakter yang di acak ke dalam string
+							$string .=$karakter[$acak];
+						}
+						// masukkan string ke array baru
+						$arr[$i]=$string;
 					}else{
 						// echo "false ";
 						$no++;
