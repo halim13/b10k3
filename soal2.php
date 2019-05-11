@@ -9,6 +9,7 @@
 <body>
 	<br>
 	<?php 
+	error_reporting(0);
 	// buat fungsi cek username
 	function cekUsername($username){
 		// jika $sername bukan abcdefghijklmnopqrstuvwxyz. atau panjang $username bukan 8 maka
@@ -23,24 +24,28 @@
 			echo "username <b>$username</b> valid.";
 		}
 	}
-
 	// buat fungsi cek email
 	function cekEmail($email){
+		// pregmatch email
+		$pregEmail=preg_match("/^[a-zA-Z0-9@{1}.]*$/",$email);
+		// pecah sebelum dan setelah @
 		$pecah = explode("@", $email);
+		// pecah sebelum dan setelah .
 		$pecah2 = explode(".", $pecah[1]);
-		if(!preg_match("/^[a-zA-Z0-9@.]*$/",$email)||strlen($pecah[0])<4||$pecah2==null){
+		// panjang karakter sebelum @
+		$panjangUser=strlen($pecah[0]);
+		if(!$pregEmail||$panjangUser<4||$pecah2[0]==""||$pecah2[1]==""){
 			echo "email <b>$email</b> invalid.<br>";
-			echo "email hanya menerima inputan huruf kecil, besar, angka, @ atau titik dengan panjang nama akun 4 dan diakhiri domain.";
+			echo "email hanya menerima inputan huruf kecil, besar, angka, at(@) atau titik(.) dengan panjang nama akun 4 dan diakhiri domain.";
 		}else{
 			echo "email <b>$email</b> valid.";
 		}
 	}
-
 	// panggil fungsi cekUsername
 	cekUsername("........");
 	echo "<br>";
 	// panggil fungsi cekEmail
-	cekEmail("kamu@");
+	cekEmail("halim@hasan.udin");
 	?>
 </body>
 </html>
