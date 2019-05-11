@@ -16,5 +16,6 @@ soal 1-6 dikerjakan menggunakan php
 
 dalam soal 6 gunakan database yang ada dalam folder db dengan nama database data_programmer.sql
 
-screenshoot soal nomor 6
+### screenshoot soal nomor 6
+
 ![soal 6](https://github.com/halim13/b10k3/blob/master/6/ss.png)
